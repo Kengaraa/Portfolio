@@ -257,3 +257,49 @@ body {
 .social-links-container a:hover {
     color: #00cfd8;
 }
+.navmenu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Gives extra space since the mobile navbar is taller */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 15px;
+        gap: 10px; 
+        height: auto; /* Change from 70px to auto so it fits both rows perfectly */
+    }
+
+    .navmenu {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .hero {
+        padding: 40px 15px;
+        min-height: auto;
+    }
+
+    .herocontent h1 {
+        font-size: 14px; /* Fixes uppercase headline size on small screens */
+    }
+
+    .herocontent h2 {
+        font-size: 28px !important; /* Prevents huge text from clipping on small screens */
+    }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
